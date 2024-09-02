@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--branco);
+}
+
+:root {
+    --branco: #fff;
+    --main: #0000008c;
+    --topo: #00cad1;
+    --efeito: #004b4c;
+
+}
+
+main {
+    color: var(--main);
+    margin-bottom: 60px;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.container-titulo {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-titulo h2, .container-titulo h3 {
+    margin: 0;
+}
+
+/* TOPO */
+.topo {
+    background-color: var(--topo);
+    width: 100%;
+}
+
+.topo .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    min-width: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.topo-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid;
+
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--branco);
+}
+
+.topo-titulo a {
+    display: flex;
+}
+
+.topo-link {
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.topo-link:hover {
+    color: var(--efeito);
+}
+/* FIM da estilização do topo */
