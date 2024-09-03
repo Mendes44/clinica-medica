@@ -82,3 +82,25 @@
     font-weight: 600;
     padding: 10px 20px;
 }
+
+/* Responsavidade em diferentes telas */
+
+/* Telas ate 425px */
+@media screen and (max-width: 425px) {
+   .box-visao-geral { height: 200px; }
+   .box-visao-geral-titulo { font-size: 28px; }
+   .box-especialidade { width: calc (100% / 2 - 40px); }
+}
+
+/* Telas ate 768px */
+@media screen and (max-width: 768px) {
+   .box-visao-geral { height: 300px; }
+   .box-sobre img { display: none; }
+   .box-especialidades { justify-content: center; }
+   .box-especialidade { width: calc(100% / 2 - 40px); }
+   .container-rota iframe { width: 100%; height: 100%; max-width: 768px; }
+}
+
+@media screen and (max-width: 1024px) {
+    .box-visao-geral { height: 400px; }
+}

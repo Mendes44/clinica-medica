@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--branco);
@@ -90,4 +91,14 @@ footer {
 
 footer .container {
     text-align: center;
+}
+
+
+/* Responsavidade */
+
+@media (max-width: 425px) {
+    .topo .container { flex-direction: column };
+    .topo-titulo { margin: 10px 0; }
+    .topo-link { width: 100%; border-top: 1px solid #009fa5; justify-content: space-around;
+                font-size: 16px; }
 }
