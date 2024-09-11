@@ -1,0 +1,130 @@
+.sessao-especialidade {
+    margin-top: 40px;
+}
+
+.container-titulo {
+    padding: 0 20px;
+}
+
+.conteiner-links-especialidades {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.links-especialidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-especialidade {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #00cad1;
+}
+
+.link-especialidade:hover {
+    color: #0d6e71;
+}
+
+.box-tabela-especialista {
+    display: flex;
+    justify-content: center;
+    height: 240px;
+    width: 100%;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.box-tabela-especialista img {
+    width: 30%;
+    height: 100%;
+}
+
+.tabela-especialistas thead tr {
+    background-color: #00cad1;
+    color: #fff;
+}
+
+.tabela-especialistas tr {
+    background-color: #f1f1f1;
+    color: #585757;
+    font-weight: 500;
+}
+
+.voltar {
+    position: absolute;
+    right: 120px;
+    bottom: 10px;
+}
+
+.voltar a {
+    padding: 20px;
+    background-color: #00cad1;
+    border-radius: 50px;
+    
+    text-decoration: none;
+    color: #fff;
+}
+
+.voltar a:hover {
+    background-color: #0d6e71;
+    color: #000;
+}
+
+main {
+    position: relative;
+}
+
+/* Mesma função do odd 
+.tabela-especialistas tbody tr:nth-of-type(2n+1) {
+    background-color: #cdcdcd;
+    border: 1px solid #f1f1f1;
+} */
+
+
+.tabela-especialistas tbody tr:nth-child(odd) {
+    background-color: #cdcdcd;
+    border: 1px solid #f1f1f1;
+}
+
+
+.tabela-especialistas th, .tabela-especialistas td {
+    padding: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px){
+    .box-tabela-especialista img {
+        display: none;
+    }
+
+    .tabela-especialistas {
+        width: 100%;
+    }
+
+    .box-tabela-especialista {
+        height: auto;
+        justify-content: center;
+    }
+    .voltar {
+        position: absolute;
+        right: 150px;
+        bottom: -50px;
+    }
+
+    .voltar a {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .box-tabela-especialista{
+        padding: 0;
+    }
+}
