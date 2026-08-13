@@ -49,10 +49,11 @@ p { margin: 0 0 1rem; }
 /* Cabeçalho fixo e navegação desktop. */
 .topo { position: sticky; z-index: 100; top: 0; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--borda); backdrop-filter: blur(12px); }
 .topo-conteudo { display: flex; min-height: 76px; align-items: center; justify-content: space-between; }
-.marca img { width: 150px; }
+.marca img { width: 176px; height: auto; }
 .menu { display: flex; align-items: center; gap: 1.4rem; }
 .menu > a { color: var(--texto); font-weight: 700; text-decoration: none; }
-.menu > a:not(.botao):hover, .menu > a[aria-current="page"] { color: var(--primaria); }
+/* O estado de página atual colore apenas links comuns; botões preservam texto branco. */
+.menu > a:not(.botao):hover, .menu > a[aria-current="page"]:not(.botao) { color: var(--primaria); }
 .menu-botao { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--primaria-clara); cursor: pointer; }
 .menu-botao span { display: block; width: 21px; height: 2px; margin: 4px auto; background: var(--texto); transition: transform .2s, opacity .2s; }
 
@@ -64,7 +65,7 @@ p { margin: 0 0 1rem; }
 .rodape { padding-top: 3rem; color: #d8eced; background: #123f46; }
 .rodape-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
 .rodape-grid > div { display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; }
-.rodape-grid img { width: 150px; }
+.rodape-grid img { width: 176px; height: auto; }
 .rodape-grid a { text-decoration: none; }
 .rodape-grid a:hover { color: var(--branco); text-decoration: underline; }
 .rodape-final { display: flex; justify-content: space-between; margin-top: 2.5rem; padding-block: 1.2rem; border-top: 1px solid rgba(255,255,255,.16); font-size: .88rem; }
@@ -74,7 +75,7 @@ p { margin: 0 0 1rem; }
     body.menu-aberto { overflow: hidden; }
     .container { width: min(calc(100% - 30px), var(--largura)); }
     .topo-conteudo { min-height: 68px; }
-    .marca img { width: 128px; }
+    .marca img { width: 150px; }
     .menu-botao { display: block; }
     .menu { position: fixed; inset: 68px 0 auto; display: none; padding: 1rem 20px 1.4rem; background: var(--branco); border-bottom: 1px solid var(--borda); box-shadow: var(--sombra); }
     .menu.ativo { display: flex; flex-direction: column; align-items: stretch; gap: 0; }

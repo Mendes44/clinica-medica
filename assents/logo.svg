@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 88" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Clínica Médica Life</title>
+  <desc id="descricao">As letras CM, um coração coral e a palavra Life</desc>
+  <!-- Versão para fundos claros. Todos os elementos são vetoriais. -->
+  <g transform="translate(5 9)">
+    <text x="0" y="54" fill="#18333a" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="500" letter-spacing="-3">CM</text>
+    <!-- O deslocamento cria uma margem óptica equilibrada após “CM”. -->
+    <path transform="translate(12 0)" d="M103 63C92 54 70 40 70 22C70 9 80 1 92 1C100 1 107 5 112 12C117 5 124 1 132 1C144 1 154 9 154 22C154 40 132 54 121 63L112 70Z" fill="#ef626c"/>
+    <!-- “Life” começa 12 px depois do limite visual do coração. -->
+    <text x="178" y="55" fill="#087f8c" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="800" letter-spacing="-2">Life</text>
+  </g>
+</svg>
