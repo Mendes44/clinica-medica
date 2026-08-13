@@ -1,0 +1,6 @@
+# Permite indexação pública e indica onde está o sitemap.
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://www.clinicalife.com.br/sitemap.xml

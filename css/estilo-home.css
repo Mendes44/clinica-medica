@@ -1,107 +1,66 @@
-:root {
-    --branco: #fff;
-    --main: #0000008c;
-    --topo-link: #00cad1;
-    --efeito: #004b4c;
-    --rodape: #0d6e71;
+/* Hero: sobreposição escura garante leitura independente da fotografia. */
+.hero { min-height: 620px; display: grid; place-items: center; position: relative; color: var(--branco); background-image: linear-gradient(90deg, rgba(7,49,55,.88), rgba(7,49,55,.28)), image-set(url('../assents/recepcao.avif') type('image/avif'), url('../assents/recepcao.webp') type('image/webp')); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.hero-conteudo { padding-block: 5rem; }
+.hero h1 { max-width: 780px; }
+.hero-conteudo > p:not(.destaque) { max-width: 620px; font-size: clamp(1rem, 2vw, 1.25rem); }
+.hero .destaque { color: #bfeff1; }
+.grupo-botoes { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
 
+/* Faixa de indicadores. */
+.faixa-dados { background: var(--primaria-escura); color: var(--branco); }
+.dados-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.dados-grid div { display: flex; flex-direction: column; padding: 1.6rem; text-align: center; border-right: 1px solid rgba(255,255,255,.18); }
+.dados-grid div:last-child { border: 0; }
+.dados-grid strong { font-size: 1.15rem; }
+.dados-grid span { color: #d7eff0; font-size: .9rem; }
+
+/* Bloco sobre a clínica. */
+.sobre-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: clamp(2rem, 6vw, 5rem); }
+.imagem-moldura { position: relative; }
+.imagem-moldura::before { content: ''; position: absolute; inset: 18px -18px -18px 18px; z-index: -1; border-radius: var(--raio); background: var(--primaria-clara); }
+.imagem-moldura picture { display: block; }
+.imagem-moldura img { width: 100%; aspect-ratio: 1.18; object-fit: cover; border-radius: var(--raio); }
+.lista-check { padding: 0; list-style: none; }
+.lista-check li { position: relative; margin: .8rem 0; padding-left: 1.8rem; }
+.lista-check li::before { content: '✓'; position: absolute; left: 0; color: var(--primaria); font-weight: 900; }
+
+/* Cards de especialidades. */
+.cabecalho-secao { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.link-seta { color: var(--primaria-escura); font-weight: 800; white-space: nowrap; }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.card-especialidade { overflow: hidden; background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); box-shadow: 0 8px 28px rgba(17,66,72,.07); }
+.card-especialidade picture { display: block; }
+.card-especialidade img { width: 100%; aspect-ratio: 1.55; object-fit: cover; }
+.card-especialidade div { padding: 1.25rem; }
+.card-especialidade p { color: var(--texto-suave); }
+
+/* Chamada e contato. */
+.cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(2rem, 5vw, 4rem); color: var(--branco); background: linear-gradient(135deg, var(--primaria-escura), var(--primaria)); border-radius: calc(var(--raio) + 6px); }
+.cta h2 { max-width: 650px; margin: 0; }
+.contato-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 3rem; }
+.contato-grid address { color: var(--texto-suave); font-style: normal; }
+.contato-grid a { color: var(--primaria-escura); font-weight: 700; }
+.mapa { width: 100%; min-height: 390px; border: 0; border-radius: var(--raio); }
+
+@media (max-width: 780px) {
+    .hero { min-height: 520px; background-position: 60% center; }
+    .dados-grid { grid-template-columns: 1fr; }
+    .dados-grid div { padding: .9rem; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+    .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
+    .imagem-moldura { max-width: 460px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .card-especialidade { display: grid; grid-template-columns: 42% 58%; }
+    .card-especialidade picture, .card-especialidade img { height: 100%; }
+    .card-especialidade img { aspect-ratio: auto; }
+    .cta { align-items: flex-start; flex-direction: column; }
 }
 
-#sobre, #especialidades, #contato {
-    padding: 40px 20px 0;
-}
-
-
-.box-visao-geral {
-    position: relative;
-    background-image: url(../assents/recepcao.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 500px;
-}
-
-.box-visao-geral-titulo {
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    color: var(--branco);
-}
-
-.box-visao-geral h1 {
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 38px;
-    margin: 0;
-}
-
-.box-sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box-sobre h3 {
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.box-sobre img {
-    height: 250px;
-}
-
-.box-especialidades {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.box-especialidade img {
-    width: 100%;
-}
-
-.box-especialidade {
-    border-radius: 3px;
-    box-shadow: 0px 1px 10px rgb(0 0 0 / 50%);
-    margin: 20px;
-    width: calc(100%/3 - 40px);
-}
-.box-especialidade figcaption {
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-}
-
-.box-link-horario {
-    text-align: center;
-    margin-top: 20px;
-}
-.link-horarios {
-    text-decoration: none;
-    background-color: var(--topo);
-    color: var(--branco);
-    font-weight: 600;
-    padding: 10px 20px;
-}
-
-/* Responsavidade em diferentes telas */
-
-/* Telas ate 425px */
-@media screen and (max-width: 425px) {
-   .box-visao-geral { height: 200px; }
-   .box-visao-geral-titulo { font-size: 28px; }
-   .box-especialidade { width: calc (100% / 2 - 40px); }
-}
-
-/* Telas ate 768px */
-@media screen and (max-width: 768px) {
-   .box-visao-geral { height: 300px; }
-   .box-sobre img { display: none; }
-   .box-especialidades { justify-content: center; }
-   .box-especialidade { width: calc(100% / 2 - 40px); }
-   .container-rota iframe { width: 100%; height: 100%; max-width: 768px; }
-}
-
-@media screen and (max-width: 1024px) {
-    .box-visao-geral { height: 400px; }
+@media (max-width: 480px) {
+    .hero { min-height: 500px; }
+    .hero-conteudo { padding-block: 3.4rem; }
+    .grupo-botoes { align-items: stretch; flex-direction: column; }
+    .cabecalho-secao { align-items: flex-start; flex-direction: column; gap: .3rem; }
+    .card-especialidade { display: block; }
+    .card-especialidade img { aspect-ratio: 1.8; }
+    .mapa { min-height: 300px; }
 }

@@ -1,145 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/estilo-geral.css">
-        <link rel="stylesheet" href="css/estilo-home.css">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,
-        wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-            rel="stylesheet">
-        <title>CMLife - HOME</title>
-    </head>
-    <body>
-        <header class="topo">
-            <div class="container">
-                <div class="topo-titulo">
-                    <a href="index.html">
-                        <img src="assents/logo.png" alt="Clínica Médica"
-                            title="Clínica Médica Life">
-                    </a>
-                </div>
+<head>
+    <!-- Metadados essenciais de SEO e responsividade. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Médica Life em Belo Horizonte: consultas em ortopedia, pediatria, geriatria, psicologia e fisioterapia. Solicite seu agendamento online.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#087f8c">
+    <link rel="canonical" href="https://www.clinicalife.com.br/">
+    <link rel="icon" href="assents/logo2.png" type="image/png">
+    <link rel="preload" as="image" href="assents/recepcao.avif" type="image/avif">
+    <link rel="stylesheet" href="css/estilo-geral.css">
+    <link rel="stylesheet" href="css/estilo-home.css">
+    <script src="js/site.js" defer></script>
 
-                <nav>
-                    <a class="topo-link" href="#sobre">Sobre</a>
-                    <a class="topo-link"
-                        href="especialidades.html">Especialidades</a>
-                    <a class="topo-link" href="#contato">Contato</a>
-                </nav>
+    <!-- Dados estruturados ajudam mecanismos de busca a identificar a empresa. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "Clínica Médica Life",
+        "url": "https://www.clinicalife.com.br/",
+        "telephone": "+55-31-99999-9999",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. dos Andradas, 3000",
+            "addressLocality": "Belo Horizonte",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+        },
+        "openingHours": "Mo-Sa 06:00-21:00",
+        "medicalSpecialty": ["Orthopedic", "Pediatric", "Geriatric", "Psychiatric", "Physiotherapy"]
+    }
+    </script>
+    <title>Clínica Médica Life | Consultas em Belo Horizonte</title>
+</head>
+<body>
+    <!-- Link invisível até receber foco, útil para leitores de tela e teclado. -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Cabeçalho compartilhado entre as páginas. -->
+    <header class="topo" data-header>
+        <div class="container topo-conteudo">
+            <a class="marca" href="index.html" aria-label="Clínica Life - página inicial">
+                <img src="assents/logo.png" alt="Clínica Médica Life" width="156" height="60">
+            </a>
+
+            <!-- Botão do menu sanduíche aparece somente em telas menores. -->
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="menu" id="menu-principal" aria-label="Navegação principal">
+                <a aria-current="page" href="index.html">Início</a>
+                <a href="index.html#sobre">A clínica</a>
+                <a href="especialidades.html">Especialidades</a>
+                <a href="index.html#contato">Contato</a>
+                <a class="botao botao-menu" href="agendamento.html">Agendar consulta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- Hero com proposta clara e duas ações principais. -->
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div class="container hero-conteudo">
+                <p class="destaque">Cuidado completo em Belo Horizonte</p>
+                <h1 id="titulo-principal">Sua saúde merece atenção em cada fase da vida.</h1>
+                <p>Especialistas próximos, atendimento acolhedor e horários flexíveis para cuidar de você e da sua família.</p>
+                <div class="grupo-botoes">
+                    <a class="botao" href="agendamento.html">Solicitar agendamento</a>
+                    <a class="botao botao-secundario" href="especialidades.html">Conhecer especialidades</a>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <!-- CONTEUDO PRINCIPAL -->
-        <main>
-            <section class="box-visao-geral">
-                <div class="box-visao-geral-titulo container">
-                    <h1>Clínica Médica Life<br>Aqui a gente cuida de você</h1>
-                </div>
-            </section>
+        <!-- Indicadores rápidos reforçam diferenciais sem sobrecarregar a tela. -->
+        <section class="faixa-dados" aria-label="Diferenciais da clínica">
+            <div class="container dados-grid">
+                <div><strong>5+</strong><span>especialidades</span></div>
+                <div><strong>Seg–Sáb</strong><span>das 6h às 21h</span></div>
+                <div><strong>Fácil acesso</strong><span>com estacionamento</span></div>
+            </div>
+        </section>
 
-            <section class="container" id="sobre">
-                <div class="container-titulo">
-                    <h2>Sobre a Clínica</h2>
-                    <p>Nossas clínicas está pronta para receber nossos pacientes
-                        através de uma execelente estrutura, comodidade e com
-                        segurança de que você prescisa.</p>
-                </div>
+        <!-- Seção institucional. -->
+        <section class="secao container sobre-grid" id="sobre" aria-labelledby="titulo-sobre">
+            <div class="imagem-moldura">
+                <!-- AVIF é menor; WebP funciona como alternativa em navegadores antigos. -->
+                <picture><source srcset="assents/clinica.avif" type="image/avif"><img src="assents/clinica.webp" alt="Fachada moderna representando a estrutura da Clínica Life" loading="lazy" width="626" height="438"></picture>
+            </div>
+            <div>
+                <p class="destaque">A Clínica Life</p>
+                <h2 id="titulo-sobre">Acolhimento que começa antes da consulta</h2>
+                <p>Nossa estrutura foi pensada para tornar cada visita simples, segura e confortável — do agendamento ao acompanhamento.</p>
+                <ul class="lista-check">
+                    <li>Atendimento de segunda a sábado</li>
+                    <li>Sala de espera com Wi-Fi</li>
+                    <li>Estacionamento amplo e localização acessível</li>
+                    <li>Agendamento online, por telefone ou WhatsApp</li>
+                </ul>
+            </div>
+        </section>
 
-                <div class="box-sobre">
-                    <img src="assents/medico.jpg" alt="Imagem de um Médico"
-                        title="Imagem de um Médico">
-
+        <!-- Prévia das especialidades com links para a página detalhada. -->
+        <section class="secao secao-suave" aria-labelledby="titulo-especialidades">
+            <div class="container">
+                <div class="cabecalho-secao">
                     <div>
-                        <h3>Aqui na nossa clinica você vai encontrar:</h3>
-
-                        <ul type="disc">
-                            <li>Horario Flexível. Atendemos de segunda à
-                                sábado.</li>
-                            <li>Estacionamento amplo com 600 vagas.</li>
-                            <li>Sala de espera com TV e WIFI.</li>
-                            <li>Agendamento pelo telefone ou WhatsApp.</li>
-                            <li>Excelente localização.</li>
-                            <li>Entrega de exames em sua residência.</li>
-                        </ul>
+                        <p class="destaque">Equipe multidisciplinar</p>
+                        <h2 id="titulo-especialidades">Cuidado para toda a família</h2>
                     </div>
+                    <a class="link-seta" href="especialidades.html">Ver todas <span aria-hidden="true">→</span></a>
                 </div>
-            </section>
-
-            <section class="container" id="especialidades">
-                <div class="container-titulo">
-                    <h2>Uma clínica de multiespecialidade</h2>
-                    <p>Nossa clínica possui diversas especialidades. Como:
-                        ortopedia, pediatra, geriatria, pscologia,
-                        fisioterapia
-                        e outros.</p>
+                <div class="cards-grid">
+                    <article class="card-especialidade">
+                        <picture><source srcset="assents/ortopedia1.avif" type="image/avif"><img src="assents/ortopedia1.webp" alt="Atendimento em ortopedia" loading="lazy" width="626" height="417"></picture>
+                        <div><h3>Ortopedia</h3><p>Prevenção e cuidado de ossos, músculos e articulações.</p></div>
+                    </article>
+                    <article class="card-especialidade">
+                        <picture><source srcset="assents/pediatra.avif" type="image/avif"><img src="assents/pediatra.webp" alt="Atendimento em pediatria" loading="lazy" width="626" height="417"></picture>
+                        <div><h3>Pediatria</h3><p>Acompanhamento atento em todas as fases da infância.</p></div>
+                    </article>
+                    <article class="card-especialidade">
+                        <picture><source srcset="assents/geriatra.avif" type="image/avif"><img src="assents/geriatra.webp" alt="Atendimento em geriatria" loading="lazy" width="626" height="417"></picture>
+                        <div><h3>Geriatria</h3><p>Saúde, autonomia e qualidade de vida no envelhecimento.</p></div>
+                    </article>
                 </div>
-
-                <div class="box-especialidades">
-                    <figure class="box-especialidade">
-                        <img src="assents/ortopedia1.png"
-                            alt="Imagem de um ortopedista"
-                            title="Imagem de um ortopedista">
-                        <figcaption>Ortopedia</figcaption>
-                    </figure>
-
-                    <figure class="box-especialidade">
-                        <img src="assents/pediatra.png" alt="Pediatra"
-                            title="pediatra">
-                        <figcaption>Pediatra</figcaption>
-                    </figure>
-                    <figure class="box-especialidade">
-                        <img src="assents/geriatra.png" alt="Geriatra"
-                            title="geriatra">
-                        <figcaption>Geriatra</figcaption>
-                    </figure>
-                </div>
-
-                <div class="box-link-horario">
-                    <a class="link-horarios" href="especialidades.html">VER
-                        HORÁRIOS</a>
-                </div>
-            </section>
-
-            <section class="container" id="contato">
-                <div class="container-titulo">
-                    <h3>Contato</h3>
-                    <p>Nossa clínica médica está aberto de <strong>segunda à
-                            sábado das 6:00 às
-                            21:00</strong></p>
-                    <p>Através do telefone/WhatsApp
-                        <strong>(31)99999-9999</strong> você
-                        pode
-                        fazer o agendamento de consultas e exames</p>
-                    <p>Estaos localizados no estacionamento do Boulevard
-                        Shopping
-                        <strong>Av. dos Andradas, 3000 -
-                            Belo
-                            Horizonte, Minas Gerais.</strong></p>
-                </div>
-
-                <div class="container-rota">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.088458748174!2d-43.92269222593594!3d-19.920676838016018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69983f4a0d60f%3A0x9d2ceaa9db57f6ea!2sBoulevard%20Shopping%20Belo%20Horizonte!5e0!3m2!1spt-BR!2sbr!4v1725296413870!5m2!1spt-BR!2sbr"
-                        width="1024" height="400" style="border:0;"
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </section>
-        </main>
-
-        <!-- Rodapé -->
-        <footer>
-            <div class="container">
-
-                <img class="topo-logo" src="assents/logo.png" alt="Logo" title="logo">
-                
-                <p>Telefone e WhatsApp: (31)999999-9999</p>
-                <p>Endereço: Av. dos Andradas, 3000 - Belo Horizonte, Minas
-                    Gerais</p>
-               <p>&COPY;2024 Clínica Médica Life - Todos direitos reservado.</p>
             </div>
-        </footer>
-    </body>
+        </section>
+
+        <!-- Chamada de conversão principal para captação de lead. -->
+        <section class="secao container">
+            <div class="cta">
+                <div><p class="destaque destaque-claro">Agende sem complicação</p><h2>Encontre o melhor horário para cuidar de você.</h2></div>
+                <a class="botao botao-claro" href="agendamento.html">Começar agora</a>
+            </div>
+        </section>
+
+        <!-- Contato e localização. O mapa carrega apenas quando necessário. -->
+        <section class="secao container" id="contato" aria-labelledby="titulo-contato">
+            <div class="contato-grid">
+                <div>
+                    <p class="destaque">Fale conosco</p>
+                    <h2 id="titulo-contato">Estamos perto de você</h2>
+                    <address>
+                        <p><strong>Endereço</strong><br>Av. dos Andradas, 3000<br>Belo Horizonte — MG</p>
+                        <p><strong>Telefone e WhatsApp</strong><br><a href="tel:+5531999999999">(31) 99999-9999</a></p>
+                        <p><strong>Atendimento</strong><br>Segunda a sábado, das 6h às 21h</p>
+                    </address>
+                </div>
+                <iframe class="mapa" title="Localização da Clínica Life no Boulevard Shopping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.088458748174!2d-43.92269222593594!3d-19.920676838016018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69983f4a0d60f%3A0x9d2ceaa9db57f6ea!2sBoulevard%20Shopping%20Belo%20Horizonte!5e0!3m2!1spt-BR!2sbr!4v1725296413870!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com navegação complementar e transparência sobre o projeto. -->
+    <footer class="rodape">
+        <div class="container rodape-grid">
+            <div><img src="assents/logo.png" alt="Clínica Médica Life" width="150" height="58"><p>Cuidado próximo, humano e completo.</p></div>
+            <div><strong>Navegue</strong><a href="especialidades.html">Especialidades</a><a href="agendamento.html">Agendamento</a><a href="privacidade.html">Privacidade</a></div>
+            <div><strong>Contato</strong><a href="tel:+5531999999999">(31) 99999-9999</a><span>Seg–Sáb, 6h–21h</span></div>
+        </div>
+        <div class="container rodape-final"><span>© <span data-ano></span> Clínica Médica Life.</span><span>Site demonstrativo.</span></div>
+    </footer>
+</body>
 </html>

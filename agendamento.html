@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <!-- Página de conversão: preparada para receber tráfego orgânico e anúncios. -->
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Solicite ou consulte seu agendamento na Clínica Médica Life, em Belo Horizonte."><meta name="robots" content="index, follow"><meta name="theme-color" content="#087f8c">
+    <link rel="canonical" href="https://www.clinicalife.com.br/agendamento.html"><link rel="icon" href="assents/logo2.png" type="image/png"><link rel="stylesheet" href="css/estilo-geral.css"><link rel="stylesheet" href="css/estilo-agendamento.css"><script src="js/site.js" defer></script><script src="js/agendamento.js" defer></script><title>Agendamento online | Clínica Médica Life</title>
+</head><body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topo"><div class="container topo-conteudo"><a class="marca" href="index.html" aria-label="Clínica Life - página inicial"><img src="assents/logo.png" alt="Clínica Médica Life" width="156" height="60"></a><button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button><nav class="menu" id="menu-principal" aria-label="Navegação principal"><a href="index.html">Início</a><a href="index.html#sobre">A clínica</a><a href="especialidades.html">Especialidades</a><a href="index.html#contato">Contato</a><a aria-current="page" class="botao botao-menu" href="agendamento.html">Agendar consulta</a></nav></div></header>
+    <main id="conteudo">
+        <header class="pagina-hero"><div class="container"><p class="destaque">Agendamento online</p><h1>Seu cuidado começa aqui</h1><p>Envie uma solicitação ou consulte o andamento usando o protocolo recebido.</p></div></header>
+
+        <section class="secao container agendamento-layout">
+            <div class="abas" role="tablist" aria-label="Opções de agendamento">
+                <button id="aba-solicitar" role="tab" aria-selected="true" aria-controls="painel-solicitar">Solicitar consulta</button>
+                <button id="aba-consultar" role="tab" aria-selected="false" aria-controls="painel-consultar" tabindex="-1">Consultar solicitação</button>
+            </div>
+
+            <!-- O formulário não envia enquanto o backend não for configurado. -->
+            <div class="painel-formulario" id="painel-solicitar" role="tabpanel" aria-labelledby="aba-solicitar">
+                <div class="form-intro"><h2>Solicite um horário</h2><p>Preencha apenas os dados necessários. Nossa equipe entrará em contato para confirmar.</p></div>
+                <form id="form-agendamento" data-endpoint="" novalidate>
+                    <!-- Campo-armadilha invisível ajuda a rejeitar robôs simples no backend. -->
+                    <div class="campo-armadilha" aria-hidden="true"><label for="website">Não preencha</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+                    <div class="form-grid">
+                        <div class="campo campo-largo"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" autocomplete="name" minlength="3" maxlength="100" required><small>Como devemos chamar você?</small></div>
+                        <div class="campo"><label for="telefone">Telefone/WhatsApp</label><input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" maxlength="16" placeholder="(31) 99999-9999" required></div>
+                        <div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="voce@exemplo.com" required></div>
+                        <div class="campo"><label for="especialidade">Especialidade</label><select id="especialidade" name="especialidade" required><option value="">Selecione</option><option value="ortopedia">Ortopedia</option><option value="pediatria">Pediatria</option><option value="geriatria">Geriatria</option><option value="psicologia">Psicologia</option><option value="fisioterapia">Fisioterapia</option></select></div>
+                        <div class="campo"><label for="periodo">Período preferido</label><select id="periodo" name="periodo" required><option value="">Selecione</option><option value="manha">Manhã</option><option value="tarde">Tarde</option><option value="noite">Noite</option></select></div>
+                        <div class="campo campo-largo"><label for="data-preferida">Data preferida</label><input id="data-preferida" name="data_preferida" type="date" required><small>A data depende de confirmação da equipe.</small></div>
+                        <div class="campo campo-largo checkbox"><input id="consentimento" name="consentimento" type="checkbox" required><label for="consentimento">Concordo com o uso dos meus dados para atender esta solicitação, conforme a <a href="privacidade.html" target="_blank">Política de Privacidade</a>.</label></div>
+                    </div>
+                    <p class="aviso-seguranca">Não informe sintomas, diagnóstico, documentos ou outros dados médicos neste formulário.</p>
+                    <button class="botao" type="submit">Enviar solicitação</button>
+                    <div class="mensagem-form" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+
+            <!-- Consulta projetada para usar protocolo + telefone, evitando enumeração simples. -->
+            <div class="painel-formulario" id="painel-consultar" role="tabpanel" aria-labelledby="aba-consultar" hidden>
+                <div class="form-intro"><h2>Consulte sua solicitação</h2><p>Informe os dados enviados após a solicitação. Nunca exibiremos informações médicas aqui.</p></div>
+                <form id="form-consulta" data-endpoint="" novalidate>
+                    <div class="form-grid"><div class="campo"><label for="protocolo">Protocolo da solicitação</label><input id="protocolo" name="protocolo" type="text" maxlength="24" placeholder="Ex.: LIFE-A7K9P2" autocomplete="off" aria-describedby="ajuda-protocolo" required><small id="ajuda-protocolo">É o código de acompanhamento enviado depois que você solicita uma consulta.</small></div><div class="campo"><label for="telefone-consulta">Telefone usado na solicitação</label><input id="telefone-consulta" name="telefone" type="tel" inputmode="tel" maxlength="16" placeholder="(31) 99999-9999" required></div></div>
+                    <button class="botao" type="submit">Buscar agendamento</button><div class="mensagem-form" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape"><div class="container rodape-grid"><div><img src="assents/logo.png" alt="Clínica Médica Life" width="150" height="58"><p>Cuidado próximo, humano e completo.</p></div><div><strong>Navegue</strong><a href="especialidades.html">Especialidades</a><a href="agendamento.html">Agendamento</a><a href="privacidade.html">Privacidade</a></div><div><strong>Contato</strong><a href="tel:+5531999999999">(31) 99999-9999</a><span>Seg–Sáb, 6h–21h</span></div></div><div class="container rodape-final"><span>© <span data-ano></span> Clínica Médica Life.</span><span>Site demonstrativo.</span></div></footer>
+</body></html>
